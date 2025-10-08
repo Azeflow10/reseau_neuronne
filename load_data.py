@@ -20,7 +20,7 @@ def load_and_show_samples():
         plt.title(class_names[y_train[i]])
         #Cacher les axes
         plt.axis('off')
-        #Ajustement de l'espacement
+        #Ajustement de l'espacements
     plt.tight_layout()
     #Affichage de la figure
     plt.show()
