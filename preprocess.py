@@ -1,10 +1,7 @@
 import numpy as np
 
 def normalize_data(x_train, x_test):
-    """Normalise des images uint8 [0..255] vers float32 [0..1].
-
-    Affiche min/max avant et après pour vérifier le traitement.
-    """
+  
     # Affichage des valeurs min et max avant normalisation
     print("Avant:", x_train.min(), x_train.max())
 

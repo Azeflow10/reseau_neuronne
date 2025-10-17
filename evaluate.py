@@ -12,7 +12,7 @@ def evaluate_and_predict(model, x_test, y_test):
     # Prédictions sur les 12 premières images
     k = min(12, len(x_test))
     preds = model.predict(x_test[:k], verbose=0)
-    pred_labels = np.argmax(preds, axis=1)  # shape (k,)
+    pred_labels = np.argmax(preds, axis=1) 
 
     # Affichage des résultats
     plt.figure(figsize=(8, 6))
