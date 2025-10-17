@@ -15,7 +15,7 @@ def train_model(model, x_train, y_train):
         tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True)
     ]
 
-    #*
+    #Parametres entrainement
 
     history = model.fit(
         x_train, y_train,
