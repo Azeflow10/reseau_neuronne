@@ -10,4 +10,4 @@ x_train, x_test = normalize_data(x_train, x_test)
 model = make_simple_cnn()
 history = train_model(model, x_train, y_train)
 plot_history(history)
-evaluate_and_predict(model, x_test, y_test)0
+evaluate_and_predict(model, x_test, y_test)
