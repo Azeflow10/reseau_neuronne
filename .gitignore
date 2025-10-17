@@ -1,0 +1,36 @@
+# --- Environnement virtuel ---
+venv/
+.env/
+*.env
+
+# --- Fichiers Python compilés ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Données temporaires ---
+*.log
+*.tmp
+*.bak
+
+# --- Fichiers de modèles lourds ---
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+
+# --- Notebooks temporaires ---
+.ipynb_checkpoints/
+
+# --- Cache TensorFlow / Keras ---
+checkpoint/
+saved_model/
+logs/
+.history/
+
+# --- Dossiers système Windows ---
+Thumbs.db
+Desktop.ini
+
+# --- VS Code ---
+.vscode/

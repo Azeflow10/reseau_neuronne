@@ -1,16 +1,13 @@
-from load_data import load_data_normalized
+from load_data import load_and_show_samples
+from preprocess import normalize_data
+from model_simple import make_simple_cnn
+from train_model import train_model
+from utils_plot import plot_history
+from evaluate import evaluate_and_predict
 
-
-def main():
-	# Étape 2 — Préparer les données: normalisation + vérification min/max
-	(x_train, y_train), (x_test, y_test) = load_data_normalized()
-
-	# Vérifications additionnelles (types et plages)
-	print("Types:", x_train.dtype, x_test.dtype)
-	print("Train min/max:", x_train.min(), x_train.max())
-	print("Test  min/max:", x_test.min(), x_test.max())
-	print("Tailles:", x_train.shape, x_test.shape)
-
-
-if __name__ == "__main__":
-	main()
+(x_train, y_train), (x_test, y_test) = load_and_show_samples()
+x_train, x_test = normalize_data(x_train, x_test)
+model = make_simple_cnn()
+history = train_model(model, x_train, y_train)
+plot_history(history)
+evaluate_and_predict(model, x_test, y_test)
