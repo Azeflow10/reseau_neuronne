@@ -28,3 +28,8 @@ def plot_training(history):
 
     plt.tight_layout()
     plt.show()
+
+
+# Compatibilité avec main.py qui appelle plot_history(history)
+def plot_history(history):
+    plot_training(history)

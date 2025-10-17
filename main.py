@@ -2,7 +2,7 @@ from load_data import load_and_show_samples
 from preprocess import normalize_data
 from model_simple import make_simple_cnn
 from train_model import train_model
-from utils_plot import plot_history
+from utils_plot import plot_training as plot_history
 from evaluate import evaluate_and_predict
 
 (x_train, y_train), (x_test, y_test) = load_and_show_samples()

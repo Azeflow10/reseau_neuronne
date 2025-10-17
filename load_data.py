@@ -18,8 +18,9 @@ def load_and_show_samples():
     for i in range(12):
         plt.subplot(3, 4, i + 1)
         plt.imshow(x_train[i])
-        plt.title(class_names[y_train[i]])
-        #Cacher les axes
+        # y_train[i] est (1,) -> extraire l'entier
+        plt.title(class_names[int(y_train[i][0])])
+        # Cacher les axes
         plt.axis('off')
     # Ajustement des espacements
     plt.tight_layout()
