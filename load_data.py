@@ -11,17 +11,18 @@ def load_and_show_samples():
     (x_train, y_train), (x_test, y_test) = cifar10.load_data()
     # Normalisation des images
     print("x_train:", x_train.shape, "x_test:", x_test.shape)
-    #figure 8x6
+
+    # Figure 8x6
     plt.figure(figsize=(8, 6))
-    #Boucle pour afficher les 12 echantillons d'images
+    # Boucle pour afficher 12 échantillons d'images
     for i in range(12):
         plt.subplot(3, 4, i + 1)
         plt.imshow(x_train[i])
         plt.title(class_names[y_train[i]])
         #Cacher les axes
         plt.axis('off')
-        #Ajustement de l'espacements
+    # Ajustement des espacements
     plt.tight_layout()
-    #Affichage de la figure
+    # Affichage de la figure
     plt.show()
     return (x_train, y_train), (x_test, y_test)
