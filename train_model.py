@@ -20,7 +20,7 @@ def train_model(model, x_train, y_train):
     history = model.fit(
         x_train, y_train,
         validation_split=0.1,
-        epochs=20,
+        epochs=8,
         batch_size=64,
         callbacks=callbacks
     )
