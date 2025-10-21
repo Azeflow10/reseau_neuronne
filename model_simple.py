@@ -15,6 +15,13 @@ def make_simple_cnn():
         # Nouvelle reduction spatiale
         layers.MaxPooling2D((2, 2)),
 
+        #extraction de caractéristiques plus riches avec plus de filtres
+        layers.Conv2D(128, (3, 3), activation='relu', padding='same'),
+
+        # Nouvelle reduction spatiale
+        layers.MaxPooling2D((2, 2)),
+
+
         # Applatie les donnees 
         layers.Flatten(),
 
